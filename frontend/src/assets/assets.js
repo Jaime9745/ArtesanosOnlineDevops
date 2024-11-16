@@ -122,36 +122,36 @@ export const menu_list = [
     }]
 
 export const food_list = [
-    { _id: "1", name: "Vaso de Cerámica", description: "Hecho a mano", price: 20, category: "Cerámica", image: food_17 },
-    { _id: "2", name: "Vasijas", description: "Único y artesanal", price: 35, category: "Cerámica", image: food_1 },
+    { _id: "1", name: "Vaso de Cerámica", image: food_17, price: 20, description: "Hecho a mano", category: "Rolls" },
+    { _id: "2", name: "Vasijas", image: food_1, price: 35, description: "Único y artesanal", category: "Rolls" },
 
     // Textiles
-    { _id: "3", name: "Tela", description: "Color vibrante", price: 15, category: "Textiles", image: food_18 },
-    { _id: "4", name: "Bolsa de Tela", description: "Ecológica y duradera", price: 12, category: "Textiles", image: food_16 },
+    { _id: "3", name: "Tela", image: food_18, price: 15, description: "Color vibrante", category: "Cake" },
+    { _id: "4", name: "Bolsa de Tela", image: food_16, price: 12, description: "Ecológica y duradera", category: "Cake" },
 
     // Cestería
-    { _id: "5", name: "Floreros Multiuso", description: "Hecha con mimbre", price: 50, category: "Cestería", image: food_22 },
-    { _id: "6", name: "Jarrón", description: "Ideal para la mesa", price: 45, category: "Cestería", image: food_30 },
+    { _id: "5", name: "Floreros Multiuso", image: food_22, price: 50, description: "Hecha con mimbre", category: "Pure Veg" },
+    { _id: "6", name: "Jarrón", image: food_30, price: 45, description: "Ideal para la mesa", category: "Pure Veg" },
 
     // Tallado
-    { _id: "7", name: "Figura Tallada", description: "Arte en madera", price: 70, category: "Tallado", image: food_5 },
-    { _id: "8", name: "Juguetes Tallados", description: "Perfecto para niños", price: 30, category: "Tallado", image: food_25 },
+    { _id: "7", name: "Figura Tallada", image: food_5, price: 70, description: "Arte en madera", category: "Noodles" },
+    { _id: "8", name: "Juguetes Tallados", image: food_25, price: 30, description: "Perfecto para niños", category: "Noodles" },
 
     // Joyería
-    { _id: "9", name: "Collar Elegante", description: "Diseño único", price: 100, category: "Joyería", image: food_4 },
-    { _id: "10", name: "Pulsera Artesanal", description: "Hecho a mano", price: 25, category: "Joyería", image: food_7 },
+    { _id: "9", name: "Collar Elegante", image: food_4, price: 100, description: "Diseño único", category: "Pasta" },
+    { _id: "10", name: "Pulsera Artesanal", image: food_7, price: 25, description: "Hecho a mano", category: "Pasta" },
 
     // Vidrio
-    { _id: "11", name: "Florero de Vidrio", description: "Ideal para flores", price: 60, category: "Vidrio", image: food_2 },
-    { _id: "12", name: "Plato de Vidrio", description: "Decoración elegante", price: 80, category: "Vidrio", image: food_3 },
+    { _id: "11", name: "Florero de Vidrio", image: food_2, price: 60, description: "Ideal para flores", category: "Deserts" },
+    { _id: "12", name: "Plato de Vidrio", image: food_3, price: 80, description: "Decoración elegante", category: "Deserts" },
 
     // Pintura
-    { _id: "15", name: "Pintura Flores", description: "Colores vibrantes", price: 150, category: "Pintura", image: food_20 },
-    { _id: "16", name: "Floreros", description: "Detalles precisos", price: 200, category: "Pintura", image: food_26 },
+    { _id: "15", name: "Pintura Flores", image: food_20, price: 150, description: "Colores vibrantes", category: "Salad" },
+    { _id: "16", name: "Floreros", image: food_26, price: 200, description: "Detalles precisos", category: "Salad" },
 
     // Extras para completar
-    { _id: "20", name: "Cesta Decorativa", description: "Perfecto para interiores", price: 55, category: "Cestería", image: food_6 },
-    { _id: "21", name: "Zapatos de Tela", description: "Con estilo artesanal", price: 120, category: "Textiles", image: food_33 },
+    { _id: "20", name: "Cesta Decorativa", image: food_6, price: 55, description: "Perfecto para interiores", category: "Pure Veg" },
+    { _id: "21", name: "Zapatos de Tela", image: food_33, price: 120, description: "Con estilo artesanal", category: "Cake" },
     
     {
         _id: "13",
