@@ -121,92 +121,37 @@ export const menu_list = [
     }]
 
 export const food_list = [
-    {
-        _id: "1",
-        name: "Greek salad",
-        image: food_1,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
-    },
-    {
-        _id: "2",
-        name: "Veg salad",
-        image: food_2,
-        price: 18,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
-    }, {
-        _id: "3",
-        name: "Clover Salad",
-        image: food_3,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
-    }, {
-        _id: "4",
-        name: "Chicken Salad",
-        image: food_4,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
-    }, {
-        _id: "5",
-        name: "Lasagna Rolls",
-        image: food_5,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
-    }, {
-        _id: "6",
-        name: "Peri Peri Rolls",
-        image: food_6,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
-    }, {
-        _id: "7",
-        name: "Chicken Rolls",
-        image: food_7,
-        price: 20,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
-    }, {
-        _id: "8",
-        name: "Veg Rolls",
-        image: food_8,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
-    }, {
-        _id: "9",
-        name: "Ripple Ice Cream",
-        image: food_9,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    }, {
-        _id: "10",
-        name: "Fruit Ice Cream",
-        image: food_10,
-        price: 22,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    }, {
-        _id: "11",
-        name: "Jar Ice Cream",
-        image: food_11,
-        price: 10,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    }, {
-        _id: "12",
-        name: "Vanilla Ice Cream",
-        image: food_12,
-        price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
-    },
+    { _id: "1", name: "Vaso de Cerámica", description: "Hecho a mano", price: 20, category: "Cerámica", image: food_17 },
+    { _id: "2", name: "Vasijas", description: "Único y artesanal", price: 35, category: "Cerámica", image: food_1 },
+
+    // Textiles
+    { _id: "3", name: "Tela", description: "Color vibrante", price: 15, category: "Textiles", image: food_18 },
+    { _id: "4", name: "Bolsa de Tela", description: "Ecológica y duradera", price: 12, category: "Textiles", image: food_16 },
+
+    // Cestería
+    { _id: "5", name: "Floreros Multiuso", description: "Hecha con mimbre", price: 50, category: "Cestería", image: food_22 },
+    { _id: "6", name: "Jarrón", description: "Ideal para la mesa", price: 45, category: "Cestería", image: food_30 },
+
+    // Tallado
+    { _id: "7", name: "Figura Tallada", description: "Arte en madera", price: 70, category: "Tallado", image: food_5 },
+    { _id: "8", name: "Juguetes Tallados", description: "Perfecto para niños", price: 30, category: "Tallado", image: food_25 },
+
+    // Joyería
+    { _id: "9", name: "Collar Elegante", description: "Diseño único", price: 100, category: "Joyería", image: food_4 },
+    { _id: "10", name: "Pulsera Artesanal", description: "Hecho a mano", price: 25, category: "Joyería", image: food_7 },
+
+    // Vidrio
+    { _id: "11", name: "Florero de Vidrio", description: "Ideal para flores", price: 60, category: "Vidrio", image: food_2 },
+    { _id: "12", name: "Plato de Vidrio", description: "Decoración elegante", price: 80, category: "Vidrio", image: food_3 },
+
+    // Pintura
+    { _id: "15", name: "Pintura Flores", description: "Colores vibrantes", price: 150, category: "Pintura", image: food_20 },
+    { _id: "16", name: "Floreros", description: "Detalles precisos", price: 200, category: "Pintura", image: food_26 },
+
+    // Extras para completar
+    { _id: "20", name: "Cesta Decorativa", description: "Perfecto para interiores", price: 55, category: "Cestería", image: food_6 },
+    { _id: "21", name: "Zapatos de Tela", description: "Con estilo artesanal", price: 120, category: "Textiles", image: food_33 },
+    
     {
         _id: "13",
         name: "Chicken Sandwich",
@@ -222,21 +167,8 @@ export const food_list = [
         price: 18,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Sandwich"
-    }, {
-        _id: "15",
-        name: "Grilled Sandwich",
-        image: food_15,
-        price: 16,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
-    }, {
-        _id: "16",
-        name: "Bread Sandwich",
-        image: food_16,
-        price: 24,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
-    }, {
+    },
+    {
         _id: "17",
         name: "Cup Cake",
         image: food_17,
@@ -257,21 +189,8 @@ export const food_list = [
         price: 20,
         description: "Food provides essential nutrients for overall health and well-being",
         category: "Cake"
-    }, {
-        _id: "20",
-        name: "Sliced Cake",
-        image: food_20,
-        price: 15,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
-    }, {
-        _id: "21",
-        name: "Garlic Mushroom ",
-        image: food_21,
-        price: 14,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
-    }, {
+    },
+    {
         _id: "22",
         name: "Fried Cauliflower",
         image: food_22,
