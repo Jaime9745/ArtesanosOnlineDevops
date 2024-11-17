@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "test" ] # Escucha cambios en la rama 'test'
+    branches: [ "dev" ] # Escucha cambios en la rama 'test'
   pull_request:
-    branches: [ "test" ]
+    branches: [ "dev" ]
 
 jobs:
   backend:
@@ -101,8 +101,8 @@ jobs:
 
     - name: Wait for admin to start
       run: sleep 5
-
-  merge-to-main:
+      
+  merge-to-test:
     needs: [frontend, admin]
     runs-on: ubuntu-latest
 
@@ -114,22 +114,25 @@ jobs:
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
 
-    - name: Remove workflows directory and root package-lock.json
+    - name: Clean up untracked files and changes
       run: |
-        git rm -r --cached .github/workflows || true
-        if [ -f "package-lock.json" ]; then
-          git rm --cached package-lock.json
-        fi
+        git reset --hard
+        git clean -fd
+
+    - name: Restore specific files
+      run: |
+        git restore --source=HEAD .github/workflows/node.js.yml || true
+        git restore --source=HEAD package-lock.json || true
 
     - name: Commit changes excluding workflows and root package-lock.json
       run: |
-        git commit -m "Ready to Deploy without workflows and root package-lock.json" || echo "No changes to commit"
+        git commit -m "Ready to Test without workflows and root package-lock.json" || echo "No changes to commit"
 
-    - name: Merge test into main
+    - name: Merge dev into test
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git fetch origin main
-        git checkout main
-        git merge --no-ff test -m "Merging test into main" --allow-unrelated-histories -X theirs
-        git push origin main
+        git fetch origin test
+        git checkout test
+        git merge --no-ff dev -m "Merging dev into test" --allow-unrelated-histories -X theirs
+        git push origin test
