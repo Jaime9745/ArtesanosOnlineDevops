@@ -121,18 +121,13 @@ jobs:
         git merge origin/main --allow-unrelated-histories || true
         git push origin test
   
-    - name: Preserve workflows folder
+    - name: Remove workflows directory from test branch
       run: |
-        git restore --source=HEAD .github/workflows
-        git add .github/workflows
-        git commit -m "Preserve workflows folder" || echo "No changes to commit"
+        git rm -r --cached .github/workflows || true
+        git commit -m "Remove workflows folder from test before merge" || echo "No changes to commit"
+        git push origin test
 
-    - name: Commit changes excluding workflows
-      run: |
-        git status
-        git commit -m "Ready to Deploy" || echo "No changes to commit"
-  
-    - name: Merge test into main
+    - name: Merge test into main excluding workflows
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
