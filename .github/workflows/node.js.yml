@@ -119,10 +119,10 @@ jobs:
         git reset --hard
         git clean -fd
 
-    - name: Restore specific files
+    - name: Exclude specific files from the merge
       run: |
-        git restore --source=HEAD .github/workflows/node.js.yml || true
-        git restore --source=HEAD package-lock.json || true
+        git checkout test -- .github/workflows/node.js.yml
+        git checkout test -- package-lock.json
 
     - name: Commit changes excluding workflows and root package-lock.json
       run: |
