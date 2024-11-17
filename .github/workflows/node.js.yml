@@ -118,7 +118,7 @@ jobs:
       run: |
         git fetch origin main
         git checkout test
-        git merge --no-ff origin/main -m "Updating test with main"
+        git merge --no-ff origin/main -m "Updating test with main" --allow-unrelated-histories
         git restore --staged .github/workflows || true
         git restore --staged package-lock.json || true
 
