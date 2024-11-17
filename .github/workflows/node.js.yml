@@ -114,12 +114,16 @@ jobs:
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
 
-    - name: Remove workflows directory
-      run: git rm -r --cached .github/workflows || true
-
-    - name: Commit changes excluding workflows
+    - name: Remove workflows directory and root package-lock.json
       run: |
-        git commit -m "Ready to Deploy" || echo "No changes to commit"
+        git rm -r --cached .github/workflows || true
+        if [ -f "package-lock.json" ]; then
+          git rm --cached package-lock.json
+        fi
+
+    - name: Commit changes excluding workflows and root package-lock.json
+      run: |
+        git commit -m "Ready to Deploy without workflows and root package-lock.json" || echo "No changes to commit"
 
     - name: Merge test into main
       env:
@@ -129,4 +133,3 @@ jobs:
         git checkout main
         git merge --no-ff test -m "Merging test into main" --allow-unrelated-histories -X theirs
         git push origin main
-
