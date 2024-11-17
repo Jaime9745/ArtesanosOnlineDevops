@@ -124,25 +124,18 @@ jobs:
         git fetch origin test
         git checkout test || git checkout -b test origin/test
 
-    - name: Merge dev into test
+    - name: Merge only specific folders from dev into test
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git fetch origin dev
-        git merge --no-ff dev -m "Merging dev into test" --allow-unrelated-histories -X theirs
-
-    - name: Exclude specific files from the merge
-      run: |
-        git restore --source=test .github/workflows/node.js.yml
-        git restore --source=test package-lock.json
-
-    - name: Commit changes excluding workflows and root package-lock.json
-      run: |
-        git commit -m "Restore specific files in test" || echo "No changes to commit"
+        git merge --no-ff dev --allow-unrelated-histories -X ours --no-commit
+        git reset HEAD .
+        git add backend frontend admin
+        git commit -m "Merge changes from dev into test for backend, frontend, and admin only"
 
     - name: Push changes to test branch
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git push origin test
-
