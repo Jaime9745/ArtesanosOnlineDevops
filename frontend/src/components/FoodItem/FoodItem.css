@@ -11,6 +11,10 @@
 }
 .food-item-img-container{
     position: relative;
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 .food-item-img-container .add{
     width: 35px;
