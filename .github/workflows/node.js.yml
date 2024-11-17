@@ -114,14 +114,6 @@ jobs:
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
 
-    - name: Update test branch with main
-      run: |
-        git fetch origin main
-        git checkout test
-        git merge --no-ff origin/main -m "Updating test with main" --allow-unrelated-histories
-        git restore --staged .github/workflows || true
-        git restore --staged package-lock.json || true
-
     - name: Remove workflows directory and root package-lock.json
       run: |
         git rm -r --cached .github/workflows || true
