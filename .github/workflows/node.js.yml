@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "test" ] # Escucha cambios en la rama 'test'
   pull_request:
-    branches: [ "main" ]
+    branches: [ "test" ]
 
 jobs:
   backend:
@@ -34,7 +34,7 @@ jobs:
         NODE_ENV: production
 
     - name: Wait for backend server to start
-      run: sleep 10 # Ajusta según el tiempo necesario para iniciar el servidor
+      run: sleep 10
 
   frontend:
     needs: backend
@@ -67,7 +67,7 @@ jobs:
         NODE_ENV: production
 
     - name: Wait for frontend to start
-      run: sleep 5 # Ajusta según el tiempo necesario para iniciar el servidor
+      run: sleep 5
 
   admin:
     needs: backend
@@ -100,4 +100,32 @@ jobs:
         NODE_ENV: production
 
     - name: Wait for admin to start
-      run: sleep 5 # Ajusta según el tiempo necesario para iniciar el servidor
+      run: sleep 5
+
+  merge-to-main:
+    needs: [frontend, admin]
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Configure Git User
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+
+    - name: Remove workflows directory
+      run: git rm -r --cached .github/workflows || true
+
+    - name: Commit changes excluding workflows
+      run: |
+        git commit -m "Ready to Deploy" || echo "No changes to commit"
+
+    - name: Merge test into main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git fetch origin main
+        git checkout main
+        git merge --no-ff test -m "Merging test into main"
+        git push origin main
