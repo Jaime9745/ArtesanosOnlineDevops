@@ -131,6 +131,6 @@ jobs:
       run: |
         git fetch origin test
         git checkout test
-        git merge --no-ff dev -m "Merging test into test" --allow-unrelated-histories -X theirs
+        git merge --no-ff dev -m "Merging dev into test" --allow-unrelated-histories -X theirs
         git push origin test
 
