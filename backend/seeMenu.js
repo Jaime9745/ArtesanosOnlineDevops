@@ -15,35 +15,35 @@ const connectDB = async () => {
 const menuData = [
     {
         menu_name: "Cerámica",
-        menu_image: "menu_1.png"
+        menu_image: "/images/menu_1.png"
     },
     {
         menu_name: "Textiles",
-        menu_image: "menu_2.png"
+        menu_image: "/images/menu_2.png"
     },
     {
         menu_name: "Cestería",
-        menu_image: "menu_3.png"
+        menu_image: "/images/menu_3.png"
     },
     {
         menu_name: "Tallado",
-        menu_image: "menu_4.png"
+        menu_image: "/images/menu_4.png"
     },
     {
         menu_name: "Joyería",
-        menu_image: "menu_5.png"
+        menu_image: "/images/menu_5.png"
     },
     {
         menu_name: "Vidrio",
-        menu_image: "menu_6.png"
+        menu_image: "/images/menu_6.png"
     },
     {
         menu_name: "Cartonería",
-        menu_image: "menu_7.png"
+        menu_image: "/images/menu_7.png"
     },
     {
         menu_name: "Pintura",
-        menu_image: "menu_8.png"
+        menu_image: "/images/menu_8.png"
     }
 ];
 
