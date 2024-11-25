@@ -5,7 +5,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
 
-    const url = "https://artesanosonline-backend.onrender.com";
+    const url = "http://localhost:4000";
     const [food_list, setFoodList] = useState([]);
     const [menu_list, setMenuList] = useState([]);
     const [cartItems, setCartItems] = useState({});
