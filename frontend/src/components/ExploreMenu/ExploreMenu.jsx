@@ -5,6 +5,7 @@ import { StoreContext } from '../../Context/StoreContext'
 const ExploreMenu = ({category,setCategory}) => {
 
   const {menu_list} = useContext(StoreContext);
+  const {url} = useContext(StoreContext);
   
   return (
     <div className='explore-menu' id='explore-menu'>
@@ -15,7 +16,7 @@ const ExploreMenu = ({category,setCategory}) => {
             return (
                 <div onClick={()=>setCategory(prev=>prev===item.menu_name?"All":item.menu_name)} key={index} className='explore-menu-list-item'>
                   <div className='explore-menu-list-item-img-container'>
-                    <img src={item.menu_image} className={category===item.menu_name?"active":""} alt="" />
+                    <img src={url+"/images/"+item.menu_image} className={category===item.menu_name?"active":""} alt="" />
                   </div>
                   <p>{item.menu_name}</p> 
                 </div>
