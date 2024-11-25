@@ -149,7 +149,7 @@ export const food_list = [
 
     // Pintura
     { _id: "15", name: "Pintura Flores", image: food_20, price: 150, description: "Colores vibrantes", category: "Salad" },
-    { _id: "16", name: "Floreros", image: food_26, price: 200, description: "Detalles precisos", category: "Salad" },
+    { _id: "16", name: "Floreros", image: food_26, price: 200, description: "Detalles precisos", category: "Vidrio" },
 
     // Extras para completar
     { _id: "20", name: "Cesta Decorativa", image: food_6, price: 55, description: "Perfecto para interiores", category: "Pure Veg" },
