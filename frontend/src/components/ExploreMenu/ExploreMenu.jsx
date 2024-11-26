@@ -9,7 +9,7 @@ const ExploreMenu = ({category,setCategory}) => {
   
   return (
     <div className='explore-menu' id='explore-menu'>
-      <h1>Explora Nuestra Colección</h1>
+      <h1>Explora Nuestros Productos</h1>
       <p className='explore-menu-text'>Descubre una diversa gama de tesoros artesanales. Nuestra misión es celebrar el arte y la tradición, ofreciendo piezas únicas que aportan cultura y creatividad a tu vida, una obra artesanal a la vez.</p>
       <div className="explore-menu-list">
         {menu_list.map((item,index)=>{
