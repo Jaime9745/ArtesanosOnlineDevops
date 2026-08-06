@@ -1,0 +1,17 @@
+{
+  "name": "artesanos-online",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Tienda de artesanía: frontend y admin en Vercel, backend en Cloudflare Workers",
+  "packageManager": "pnpm@11.20.0",
+  "scripts": {
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:admin": "pnpm --filter admin dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "deploy:backend": "pnpm --filter backend deploy",
+    "seed": "pnpm --filter backend seed"
+  },
+  "license": "ISC"
+}

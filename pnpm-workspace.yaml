@@ -1,0 +1,18 @@
+packages:
+  - frontend
+  - admin
+  - backend
+
+# workerd y esbuild traen binarios que pnpm no ejecuta por defecto desde v10.
+allowBuilds:
+  esbuild: true
+  workerd: true
+
+minimumReleaseAgeExclude:
+  - vite@8.2.1
+
+# eslint-plugin-react 7.37.5 aun declara peer "eslint: ...^9.7" y ya vamos por
+# la 10. Funciona, pero sin esto pnpm avisa en cada install.
+peerDependencyRules:
+  allowedVersions:
+    "eslint-plugin-react>eslint": "10"

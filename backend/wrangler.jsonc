@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "artesanosonline-api",
+  "main": "worker.js",
+  // >= 2025-09-01 activa enable_nodejs_http_server_modules, que es lo que
+  // permite que Express escuche de verdad dentro de workerd.
+  "compatibility_date": "2026-07-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "CLOUDINARY_FOLDER": "artesanos-online"
+  }
+  // Los valores sensibles van por `wrangler secret put`:
+  //   MONGO_URI, JWT_SECRET,
+  //   CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+  // En local se leen de `.dev.vars` (ver .dev.vars.example).
+}

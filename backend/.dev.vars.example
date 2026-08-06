@@ -1,0 +1,9 @@
+# Copia a `.dev.vars` y rellena. `.dev.vars` está en .gitignore.
+# En producción los mismos valores van por `wrangler secret put <NOMBRE>`.
+
+MONGO_URI="mongodb+srv://usuario:contraseña@cluster.mongodb.net/artesanos-online"
+JWT_SECRET="cadena-larga-y-aleatoria"
+
+CLOUDINARY_CLOUD_NAME="tu-cloud-name"
+CLOUDINARY_API_KEY="tu-api-key"
+CLOUDINARY_API_SECRET="tu-api-secret"

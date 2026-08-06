@@ -1,14 +1,15 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './PlaceOrder.css'
 import { StoreContext } from '../../Context/StoreContext'
 import { assets } from '../../assets/assets';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 
 const PlaceOrder = () => {
 
-    const [payment, setPayment] = useState("cod")
+    // Stripe está desactivado en el backend (devuelve 503): el único método
+    // de pago vivo es contra entrega. Ver backend/src/controllers/orderController.js
     const [data, setData] = useState({
         firstName: "",
         lastName: "",
@@ -46,28 +47,15 @@ const PlaceOrder = () => {
             items: orderItems,
             amount: getTotalCartAmount() + deliveryCharge,
         }
-        if (payment === "stripe") {
-            let response = await axios.post(url + "/api/order/place", orderData, { headers: { token } });
-            if (response.data.success) {
-                const { session_url } = response.data;
-                window.location.replace(session_url);
-            }
-            else {
-                toast.error("Something Went Wrong")
-            }
+        let response = await axios.post(url + "/api/order/placecod", orderData, { headers: { token } });
+        if (response.data.success) {
+            navigate("/myorders")
+            toast.success(response.data.message)
+            setCartItems({});
         }
-        else{
-            let response = await axios.post(url + "/api/order/placecod", orderData, { headers: { token } });
-            if (response.data.success) {
-                navigate("/myorders")
-                toast.success(response.data.message)
-                setCartItems({});
-            }
-            else {
-                toast.error("Something Went Wrong")
-            }
+        else {
+            toast.error("Something Went Wrong")
         }
-
     }
 
     useEffect(() => {
@@ -113,16 +101,12 @@ const PlaceOrder = () => {
                 </div>
                 <div className="payment">
                     <h2>Payment Method</h2>
-                    <div onClick={() => setPayment("cod")} className="payment-option">
-                        <img src={payment === "cod" ? assets.checked : assets.un_checked} alt="" />
+                    <div className="payment-option">
+                        <img src={assets.checked} alt="" />
                         <p>COD ( Cash on delivery )</p>
                     </div>
-                    <div onClick={() => setPayment("stripe")} className="payment-option">
-                        <img src={payment === "stripe" ? assets.checked : assets.un_checked} alt="" />
-                        <p>Stripe ( Credit / Debit )</p>
-                    </div>
                 </div>
-                <button className='place-order-submit' type='submit'>{payment==="cod"?"Place Order":"Proceed To Payment"}</button>
+                <button className='place-order-submit' type='submit'>Place Order</button>
             </div>
         </form>
     )

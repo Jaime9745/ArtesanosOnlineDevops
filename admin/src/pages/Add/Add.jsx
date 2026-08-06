@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Add.css'
 import { assets, url } from '../../assets/assets';
+import { fileToDataUri } from '../../lib/image';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const Add = () => {
 
-
     const [image, setImage] = useState(false);
+    const [sending, setSending] = useState(false);
     const [data, setData] = useState({
         name: "",
         description: "",
         price: "",
-        category: "Salad"
+        category: "Cerámica"
     });
 
     const onSubmitHandler = async (event) => {
@@ -23,25 +24,29 @@ const Add = () => {
             return null;
         }
 
-        const formData = new FormData();
-        formData.append("name", data.name);
-        formData.append("description", data.description);
-        formData.append("price", Number(data.price));
-        formData.append("category", data.category);
-        formData.append("image", image);
-        const response = await axios.post(`${url}/api/food/add`, formData);
-        if (response.data.success) {
-            toast.success(response.data.message)
-            setData({
-                name: "",
-                description: "",
-                price: "",
-                category: data.category
-            })
-            setImage(false);
-        }
-        else {
-            toast.error(response.data.message)
+        setSending(true);
+        try {
+            // JSON con la imagen en base64, no multipart: el backend vive en
+            // Workers y no tiene disco donde volcar el fichero.
+            const response = await axios.post(`${url}/api/food/add`, {
+                ...data,
+                price: Number(data.price),
+                image: await fileToDataUri(image),
+            });
+
+            if (response.data.success) {
+                toast.success(response.data.message)
+                setData({ name: "", description: "", price: "", category: data.category })
+                setImage(false);
+            }
+            else {
+                toast.error(response.data.message)
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('No se pudo añadir la artesanía')
+        } finally {
+            setSending(false);
         }
     }
 
@@ -72,11 +77,11 @@ const Add = () => {
                 <div className='add-category-price'>
                     <div className='add-category flex-col'>
                         <p>Product category</p>
-                        <select name='category' onChange={onChangeHandler} >
+                        <select name='category' value={data.category} onChange={onChangeHandler} >
                             <option value="Cerámica">Cerámica</option>
                             <option value="Textiles">Textiles</option>
                             <option value="Cestería">Cestería</option>
-                            <option value="STallado">Tallado</option>
+                            <option value="Tallado">Tallado</option>
                             <option value="Joyería">Joyería</option>
                             <option value="Vidrio">Vidrio</option>
                             <option value="Cartonería">Cartonería</option>
@@ -88,7 +93,7 @@ const Add = () => {
                         <input type="Number" name='price' onChange={onChangeHandler} value={data.price} placeholder='25' />
                     </div>
                 </div>
-                <button type='submit' className='add-btn' >ADD</button>
+                <button type='submit' className='add-btn' disabled={sending}>{sending ? 'SUBIENDO...' : 'ADD'}</button>
             </form>
         </div>
     )

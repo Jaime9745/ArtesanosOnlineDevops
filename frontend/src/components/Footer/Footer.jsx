@@ -1,4 +1,3 @@
-import React from 'react'
 import './Footer.css'
 import { assets } from '../../assets/assets'
 
@@ -7,7 +6,7 @@ const Footer = () => {
     <div className='footer' id='footer'>
       <div className="footer-content">
         <div className="footer-content-left">
-            <img src={assets.logo_blank} alt="" class="logo_blank" />
+            <img src={assets.logo_blank} alt="" className="logo_blank" />
             <p>Descubre una diversa gama de tesoros artesanales. Nuestra misión es celebrar el arte y la tradición, ofreciendo piezas únicas que aportan cultura y creatividad a tu vida, una obra artesanal a la vez.</p>
             <div className="footer-social-icons">
                 <img src={assets.facebook_icon} alt="" />
