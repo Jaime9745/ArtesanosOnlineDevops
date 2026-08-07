@@ -24,8 +24,6 @@ Express runs on workerd through `httpServerHandler` from `cloudflare:node`, but 
 ![pnpm](https://img.shields.io/badge/pnpm-11.20-F69220?logo=pnpm&logoColor=white)
 <!-- tech-stack:end -->
 
-Badge versions are kept in sync with `package.json` by the daily dependency-update routine.
-
 ## Getting Started
 
 Requires Node >= 22. This project uses **pnpm only** (pinned via the `packageManager` field — corepack picks it up automatically):
