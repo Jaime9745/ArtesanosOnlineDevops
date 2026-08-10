@@ -21,7 +21,7 @@ Express runs on workerd through `httpServerHandler` from `cloudflare:node`, but 
 ![JWT](https://img.shields.io/badge/JWT-9.0-000000?logo=jsonwebtokens&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-10.8-4B32C3?logo=eslint&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-22-5FA04E?logo=nodedotjs&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-11.20-F69220?logo=pnpm&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-11.21-F69220?logo=pnpm&logoColor=white)
 <!-- tech-stack:end -->
 
 ## Getting Started
