@@ -20,7 +20,7 @@
     "validator": "^13.15.35"
   },
   "devDependencies": {
-    "wrangler": "^4.124.0"
+    "wrangler": "^4.125.0"
   },
   "license": "ISC"
 }
