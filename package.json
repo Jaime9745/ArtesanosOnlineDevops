@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "description": "Tienda de artesanía: frontend y admin en Vercel, backend en Cloudflare Workers",
-  "packageManager": "pnpm@11.22.0",
+  "packageManager": "pnpm@11.23.0",
   "scripts": {
     "dev:frontend": "pnpm --filter frontend dev",
     "dev:admin": "pnpm --filter admin dev",
