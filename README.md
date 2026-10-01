@@ -11,17 +11,17 @@ Express runs on workerd through `httpServerHandler` from `cloudflare:node`, but 
 <!-- tech-stack:start -->
 ![Vercel](https://img.shields.io/badge/Vercel-deployed-000000?logo=vercel&logoColor=white)
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-deployed-F38020?logo=cloudflare&logoColor=white)
-![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-8.2-646CFF?logo=vite&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-8.3-CA4245?logo=reactrouter&logoColor=white)
+![React](https://img.shields.io/badge/React-19.3-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-8.4-CA4245?logo=reactrouter&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-5.2-000000?logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB_Atlas-Mongoose_9.9-47A248?logo=mongodb&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB_Atlas-Mongoose_9.10-47A248?logo=mongodb&logoColor=white)
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-REST-3448C5?logo=cloudinary&logoColor=white)
-![Wrangler](https://img.shields.io/badge/Wrangler-4.128-F38020?logo=cloudflare&logoColor=white)
+![Wrangler](https://img.shields.io/badge/Wrangler-4.144-F38020?logo=cloudflare&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-9.0-000000?logo=jsonwebtokens&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-10.9-4B32C3?logo=eslint&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-10.11-4B32C3?logo=eslint&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-22-5FA04E?logo=nodedotjs&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-11.25-F69220?logo=pnpm&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-12.8-F69220?logo=pnpm&logoColor=white)
 <!-- tech-stack:end -->
 
 ## Getting Started
