@@ -15,7 +15,7 @@ Express runs on workerd through `httpServerHandler` from `cloudflare:node`, but 
 ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-8.4-CA4245?logo=reactrouter&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-5.2-000000?logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB_Atlas-Mongoose_9.10-47A248?logo=mongodb&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB_Atlas-Mongoose_9.11-47A248?logo=mongodb&logoColor=white)
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-REST-3448C5?logo=cloudinary&logoColor=white)
 ![Wrangler](https://img.shields.io/badge/Wrangler-4.147-F38020?logo=cloudflare&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-9.0-000000?logo=jsonwebtokens&logoColor=white)
