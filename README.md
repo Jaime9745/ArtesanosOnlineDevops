@@ -14,14 +14,14 @@ Express runs on workerd through `httpServerHandler` from `cloudflare:node`, but 
 ![React](https://img.shields.io/badge/React-19.3-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-8.4-CA4245?logo=reactrouter&logoColor=white)
-![Express](https://img.shields.io/badge/Express-5.2-000000?logo=express&logoColor=white)
+![Express](https://img.shields.io/badge/Express-5.3-000000?logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB_Atlas-Mongoose_9.11-47A248?logo=mongodb&logoColor=white)
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-REST-3448C5?logo=cloudinary&logoColor=white)
 ![Wrangler](https://img.shields.io/badge/Wrangler-4.149-F38020?logo=cloudflare&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-9.0-000000?logo=jsonwebtokens&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-10.12-4B32C3?logo=eslint&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-22-5FA04E?logo=nodedotjs&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-12.10-F69220?logo=pnpm&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-12.11-F69220?logo=pnpm&logoColor=white)
 <!-- tech-stack:end -->
 
 ## Getting Started
