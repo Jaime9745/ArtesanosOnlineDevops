@@ -19,7 +19,7 @@ Express runs on workerd through `httpServerHandler` from `cloudflare:node`, but 
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-REST-3448C5?logo=cloudinary&logoColor=white)
 ![Wrangler](https://img.shields.io/badge/Wrangler-4.156-F38020?logo=cloudflare&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-9.0-000000?logo=jsonwebtokens&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-10.13-4B32C3?logo=eslint&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-10.14-4B32C3?logo=eslint&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-22-5FA04E?logo=nodedotjs&logoColor=white)
 ![pnpm](https://img.shields.io/badge/pnpm-12.16-F69220?logo=pnpm&logoColor=white)
 <!-- tech-stack:end -->
