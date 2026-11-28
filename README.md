@@ -12,7 +12,7 @@ Express runs on workerd through `httpServerHandler` from `cloudflare:node`, but 
 ![Vercel](https://img.shields.io/badge/Vercel-deployed-000000?logo=vercel&logoColor=white)
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-deployed-F38020?logo=cloudflare&logoColor=white)
 ![React](https://img.shields.io/badge/React-19.3-61DAFB?logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8.4-646CFF?logo=vite&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-8.5-CA4245?logo=reactrouter&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-5.3-000000?logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB_Atlas-Mongoose_9.13-47A248?logo=mongodb&logoColor=white)
